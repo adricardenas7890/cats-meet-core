@@ -7,7 +7,7 @@ I chose a social platform as a project idea as this aligns with my career intere
 ### Tools
 Bootstrap, jQuery, VS Code
 
-## Extensions Used
+### Extensions Used
 .NET Core Test Explorer
 Bootstrap 4
 Elm Emmet
