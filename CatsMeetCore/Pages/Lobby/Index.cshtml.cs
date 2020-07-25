@@ -15,9 +15,6 @@ namespace CatsMeetCore.Pages
         public string Name {get;set;}
         [BindProperty]
         public string Pic {get;set;}
-
-        public CatsMeetCore.Model.Lobby Lobbies {get;set;}
-
         private readonly ILogger<LobbyModel> _logger;
 
         public LobbyModel(ILogger<LobbyModel> logger)
