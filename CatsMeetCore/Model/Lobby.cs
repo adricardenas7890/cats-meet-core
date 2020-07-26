@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CatsMeetCore.Model 
+namespace CatsMeetCore.Model
 {
 
     public class Lobby 
@@ -14,8 +14,6 @@ namespace CatsMeetCore.Model
 
         [Required] // Name cannot be null
         public string Name {get;set;}
-        public string Picture {get;set;}
-        public string Mood {get;set;}
         public string Status {get;set;}
     }
 }
