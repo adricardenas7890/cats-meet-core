@@ -12401,23 +12401,18 @@
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": false,
-        "TagMatchingRules": [],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [
+        "TagMatchingRules": [
           {
-            "Id": "RZ3900",
-            "Severity": 3,
-            "Message": "Could not find an 'Invoke' or 'InvokeAsync' method for the view component 'CatsMeetCore.ViewComponents.CatUserViewComponent'.",
-            "Span": {
-              "FilePath": null,
-              "AbsoluteIndex": -1,
-              "LineIndex": -1,
-              "CharacterIndex": -1,
-              "Length": 0
-            }
+            "TagName": "vc:cat-user",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
           }
         ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "ITagHelper",
           "Common.TypeName": "__Generated__CatUserViewComponentTagHelper",

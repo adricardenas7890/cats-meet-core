@@ -1,10 +1,25 @@
 @page
 @using CatsMeetCore.Pages
-@model LobbyModel
+@model IEnumerable<CatsMeetCore.Model.CatUser>
 @{
     ViewData["Title"] = "Lobby";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Lobby</h1>
+    <h1 class="display-4">Chat Lobby</h1>
+</div>
+
+<div id="onlineusers">
+    @foreach (var cat in Model)
+    {
+        <li>@cat.Name</li>
+        <li>@cat.Mood</li>
+        <li>@cat.Status</li>
+        <img src="@cat.Picture"/>
+        
+    }
+</div>
+
+<div>
+    @await Component.InvokeAsync("CatUser")
 </div>
