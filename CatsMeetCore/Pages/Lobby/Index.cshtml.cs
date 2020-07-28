@@ -11,19 +11,17 @@ namespace CatsMeetCore.Pages
 {
     public class LobbyModel : PageModel
     {
-        [BindProperty]
-        public string Name {get;set;}
-        [BindProperty]
-        public string Pic {get;set;}
         private readonly ILogger<LobbyModel> _logger;
 
+        public List<CatUser> catUsers {get;set;}
         public LobbyModel(ILogger<LobbyModel> logger)
         {
             _logger = logger;
         }
         public void OnGet()
         {
-
+           CatUser cat = new CatUser();
+           catUsers = cat.GetCatUsers();
         }
     }
 }

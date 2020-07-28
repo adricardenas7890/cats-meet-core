@@ -1,25 +1,55 @@
 @page
 @using CatsMeetCore.Pages
-@model IEnumerable<CatsMeetCore.Model.CatUser>
+@* @await Component.InvokeAsync("CatUser") *@
+@* @model ICollection<CatsMeetCore.Model.CatUser> *@
+@model LobbyModel
 @{
     ViewData["Title"] = "Lobby";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Chat Lobby</h1>
+<div class="container header-container">
+    <div class="text-center">
+        <h1 class="display-4 font-weight-bold">Chat Lobby</h1>
+    </div>
 </div>
 
 <div id="onlineusers">
-    @foreach (var cat in Model)
+    @* @foreach (var cat in Model.catUsers)
     {
         <li>@cat.Name</li>
         <li>@cat.Mood</li>
         <li>@cat.Status</li>
         <img src="@cat.Picture"/>
         
-    }
+    } *@
+    <div class="row justify-content-around chat-user-row">
+        <div class="cat-user col-lg-3">
+            <div class="row">Cat Name</div>
+            <div class="row">Cat Mood</div>
+            <div class="row">Cat Picture</div>
+        </div>
+        <div class="cat-user col-lg-3">
+            <div class="row">Cat Name</div>
+            <div class="row">Cat Mood</div>
+            <div class="row">Cat Picture</div>     
+        </div>
+        <div class="cat-user col-lg-3">
+            <div class="row">Cat Name</div>
+            <div class="row">Cat Mood</div>
+            <div class="row">Cat Picture</div>
+        </div>
+    </div>
 </div>
 
-<div>
-    @await Component.InvokeAsync("CatUser")
+<div id="menu-options">
+    <div class="row justify-content-around">
+        <div class="col-lg-4 align-self-end">
+            <a class="back-btn" href="/Index"><button class="btn btn-lg btn-secondary back-btn"> Back</button></a>
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+    </div>
 </div>
