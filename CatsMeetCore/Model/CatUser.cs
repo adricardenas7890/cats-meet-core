@@ -26,7 +26,7 @@ namespace CatsMeetCore.Model
             // Temporary list of users
             catUsers.Add(new CatUser{UserID= 900, Name = "Jerry", Mood="Content", Status="Online"});
             catUsers.Add(new CatUser{UserID= 901, Name = "Samantha", Mood="Content", Status="Online"});
-            catUsers.Add(new CatUser{UserID= 902, Name = "Jerry", Mood="Content", Status="Online"});
+            catUsers.Add(new CatUser{UserID= 902, Name = "Tommy", Mood="Content", Status="Online"});
 
             return catUsers;
         }

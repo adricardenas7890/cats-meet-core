@@ -1,4 +1,5 @@
 ﻿@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -11,6 +12,6 @@
     </div>
 </div>
 <div id="enter-container">
-    <a class="enter-lobby" href="/Lobby"><button class="btn btn-small btn-secondary">Enter</button></a>
+    <a class="enter-lobby" href="./Lobby"><button class="btn btn-small btn-secondary">Enter</button></a>
 </div>
 

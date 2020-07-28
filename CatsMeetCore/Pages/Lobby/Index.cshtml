@@ -1,7 +1,6 @@
 @page
 @using CatsMeetCore.Pages
-@* @await Component.InvokeAsync("CatUser") *@
-@* @model ICollection<CatsMeetCore.Model.CatUser> *@
+@addTagHelper *, Microsoft.Mvc.TagHelpers
 @model LobbyModel
 @{
     ViewData["Title"] = "Lobby";
@@ -13,37 +12,25 @@
 </div>
 
 <div id="onlineusers">
-    @* @foreach (var cat in Model.catUsers)
-    {
-        <li>@cat.Name</li>
-        <li>@cat.Mood</li>
-        <li>@cat.Status</li>
-        <img src="@cat.Picture"/>
-        
-    } *@
     <div class="row justify-content-around chat-user-row">
+        @foreach (var cat in Model.catUsers)
+        {
         <div class="cat-user col-lg-3">
-            <div class="row">Cat Name</div>
-            <div class="row">Cat Mood</div>
-            <div class="row">Cat Picture</div>
+            <div class="row">@cat.Name</div>
+            <div class="row">@cat.Mood</div>
+            <div class="row">@cat.Status</div>
+            @if (cat.Status == "Online") {
+                <button class="btn btn-warning btn-small">Chat</button>
+            }
         </div>
-        <div class="cat-user col-lg-3">
-            <div class="row">Cat Name</div>
-            <div class="row">Cat Mood</div>
-            <div class="row">Cat Picture</div>     
-        </div>
-        <div class="cat-user col-lg-3">
-            <div class="row">Cat Name</div>
-            <div class="row">Cat Mood</div>
-            <div class="row">Cat Picture</div>
-        </div>
+        }
     </div>
 </div>
 
 <div id="menu-options">
     <div class="row justify-content-around">
         <div class="col-lg-4 align-self-end">
-            <a class="back-btn" href="/Index"><button class="btn btn-lg btn-secondary back-btn"> Back</button></a>
+            <a class="back-btn" asp-page="/Index"><button class="btn btn-lg btn-secondary back-btn"> Back</button></a>
         </div>
         <div class="col-lg-3">
 
