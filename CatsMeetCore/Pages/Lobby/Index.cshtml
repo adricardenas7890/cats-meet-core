@@ -5,38 +5,32 @@
 @{
     ViewData["Title"] = "Lobby";
 }
-<div class="container header-container">
-    <div class="text-center">
+<div class="row header-container">
+    <div class="col text-center">
         <h1 class="display-4 font-weight-bold">Chat Lobby</h1>
     </div>
 </div>
 
-<div id="onlineusers">
-    <div class="row justify-content-around chat-user-row">
+<div class= "row justify-content-around" id="onlineusers">
         @foreach (var cat in Model.catUsers)
         {
-        <div class="cat-user col-lg-3">
+        <div class="cat-user col-lg-3 col-sm-6 col-xs-6">
             <div class="row">@cat.Name</div>
             <div class="row">@cat.Mood</div>
             <div class="row">@cat.Status</div>
             @if (cat.Status == "Online") {
-                <button class="btn btn-warning btn-small">Chat</button>
+                <a class="chat-btn" href="./ChatRoom"><button class="btn btn-warning btn-small">Chat</button></a>
             }
         </div>
+        
         }
     </div>
 </div>
 
-<div id="menu-options">
-    <div class="row justify-content-around">
-        <div class="col-lg-4 align-self-end">
-            <a class="back-btn" asp-page="/Index"><button class="btn btn-lg btn-secondary back-btn"> Back</button></a>
-        </div>
-        <div class="col-lg-3">
-
-        </div>
-        <div class="col-lg-3">
-
+<div id="container-fluid menu-options align-content-stretch">
+    <div class="row justify-content-left mt-auto">
+        <div class="col-sm-4 ">
+            <a class="back-btn text-left" asp-page="/Index"><button class="btn btn-lg btn-secondary back-btn"> Back</button></a>
         </div>
     </div>
 </div>

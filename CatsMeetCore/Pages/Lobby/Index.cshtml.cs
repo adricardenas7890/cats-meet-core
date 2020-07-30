@@ -13,7 +13,8 @@ namespace CatsMeetCore.Pages
     {
         private readonly ILogger<LobbyModel> _logger;
 
-        public List<CatUser> catUsers {get;set;}
+        [BindProperty]
+        public IList<CatUser> catUsers {get;set;}
         public LobbyModel(ILogger<LobbyModel> logger)
         {
             _logger = logger;

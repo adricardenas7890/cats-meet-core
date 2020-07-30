@@ -9,8 +9,9 @@ using CatsMeetCore.Model;
 namespace CatsMeetCore.ViewComponents {
 
     public class CatUserViewComponent : ViewComponent
-    {
+    {        
         private List<CatUser> catUsers = new List<CatUser>();
+
 
         public CatUserViewComponent () {
             
